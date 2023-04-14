@@ -16,7 +16,13 @@
   {{ end }}
   {{ with $resource }}
     <figure>
-      {{ if $disableImageOptimization }}
+      {{ if eq .MediaType.SubType "gif" }}
+      <img
+        class="my-0 rounded-md"
+        src="{{ .RelPermalink }}"
+        alt="{{ $altText }}"
+      />
+      {{ else if $disableImageOptimization }}
       <img
         class="my-0 rounded-md"
         src="{{ .RelPermalink }}"
