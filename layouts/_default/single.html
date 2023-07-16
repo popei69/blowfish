@@ -54,6 +54,8 @@
     </section>
   <footer class="pt-8 max-w-prose print:hidden">
 
+    {{ partial "email-subscription.html" . }}
+
     {{ partial "author.html" . }}
 
     {{ $authorsData := .Site.Data.authors }}
