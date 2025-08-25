@@ -42,7 +42,8 @@
     {{ template "RenderImageSimple" (dict "src" $urlStr "alt" $altText) }}
   {{- else if $resource }}
     {{- $isSVG := eq $resource.MediaType.SubType "svg" }}
-    {{- $shouldOptimize := and (not $disableImageOptimizationMD) (not $isSVG) }}
+    {{- $isGIF := eq $resource.MediaType.SubType "gif" }}
+    {{- $shouldOptimize := and (not $disableImageOptimizationMD) (not $isSVG) (not $isGIF) }}
     {{- if $shouldOptimize }}
       {{ template "RenderImageResponsive" (dict "resource" $resource "alt" $altText) }}
     {{- else }}
