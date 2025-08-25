@@ -1,5 +1,5 @@
 global:
-  language: "🇫🇷"
+  language: "FR"
 
 article:
   anchor_label: "Ancre"
@@ -19,6 +19,9 @@ article:
   part: "Partie"
   this_article: "Cet article"
   related_articles: "Articles connexes"
+  zen_mode_title:
+    enable: "Activer le mode zen"
+    disable: "Désactiver le mode zen"
 
 author:
   byline_title: "Auteur"
@@ -53,6 +56,7 @@ search:
 sharing:
   email: "Envoyer par email"
   facebook: "Poster sur Facebook"
+  line: "Partager sur LINE"
   linkedin: "Poster sur LinkedIn"
   pinterest: "Poster sur Pinterest"
   reddit: "Poster sur Reddit"

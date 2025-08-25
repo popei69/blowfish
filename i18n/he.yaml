@@ -1,5 +1,5 @@
 global:
-  language: "🇮🇱"
+  language: "HE"
 
 article:
   anchor_label: "עוגן"
@@ -19,6 +19,12 @@ article:
   part: "Part"
   this_article: "This Article"
   related_articles: "Related"
+
+a11y:
+  disable_blur: "השבת טשטוש"
+  disable_images: "השבת תמונות"
+  show_link_underline: "הצג קו תחתון לקישורים"
+  font_size: "גודל גופן"
 
 author:
   byline_title: "מחבר"
@@ -53,6 +59,7 @@ search:
 sharing:
   email: "שליחת אימייל"
   facebook: "שיתוף בפייסבוק"
+  line: "שיתוף בליין"
   linkedin: "שיתוף בלינקדאין"
   pinterest: "שיתוף בפינטרסט"
   reddit: "שליחה לרדיט"

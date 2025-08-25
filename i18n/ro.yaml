@@ -1,5 +1,5 @@
 global:
-  language: "🇷🇴"
+  language: "RO"
 
 article:
   anchor_label: "Link"
@@ -19,6 +19,12 @@ article:
   part: "Part"
   this_article: "This Article"
   related_articles: "Related"
+
+a11y:
+  disable_blur: "Dezactivează estomparea"
+  disable_images: "Dezactivează imaginile"
+  show_link_underline: "Afișează sublinierea linkurilor"
+  font_size: "Dimensiunea fontului"
 
 author:
   byline_title: "Autor"
@@ -53,6 +59,7 @@ search:
 sharing:
   email: "Trimite pe email"
   facebook: "Postează pe Facebook"
+  line: "Postează LINE"
   linkedin: "Postează LinkedIn"
   pinterest: "Pune pe Pinterest"
   reddit: "Postează pe Reddit"

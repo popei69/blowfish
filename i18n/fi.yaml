@@ -1,5 +1,5 @@
 global:
-  language: "🇫🇮"
+  language: "FI"
 
 article:
   anchor_label: "Ankkuri"
@@ -19,6 +19,12 @@ article:
   part: "Part"
   this_article: "This Article"
   related_articles: "Related"
+
+a11y:
+  disable_blur: "Poista sumennus käytöstä"
+  disable_images: "Poista kuvat käytöstä"
+  show_link_underline: "Näytä linkkien alleviivaus"
+  font_size: "Fonttikoko"
 
 author:
   byline_title: "Kirjoittaja"
@@ -53,6 +59,7 @@ search:
 sharing:
   email: "Lähetä sähköpostilla"
   facebook: "Jaa Facebookissa"
+  line: "Jaa LINEssä"
   linkedin: "Jaa LinkedInissä"
   pinterest: "Kiinnitä Pinterestiin"
   reddit: "Lähetä Reddittiin"

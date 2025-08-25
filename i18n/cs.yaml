@@ -1,5 +1,5 @@
 global:
-  language: "🇨🇿"
+  language: "CS"
 
 article:
   anchor_label: "Kotva"
@@ -25,6 +25,12 @@ article:
   part: "Část"
   this_article: "Tento článek"
   related_articles: "Related"
+
+a11y:
+  disable_blur: "Zakázat rozmazání"
+  disable_images: "Zakázat obrázky"
+  show_link_underline: "Zobrazit podtržení odkazů"
+  font_size: "Velikost písma"
 
 author:
   byline_title: "Autor"
@@ -59,6 +65,7 @@ search:
 sharing:
   email: "Poslat emailem"
   facebook: "Sdílet na Facebook"
+  line: "Sdílejte na LINE"
   linkedin: "Sdílet na LinkedIn"
   pinterest: "Připnout na Pinterest"
   reddit: "Přidat na Reddit"

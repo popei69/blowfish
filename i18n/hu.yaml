@@ -1,5 +1,5 @@
 global:
-  language: "🇭🇺"
+  language: "HU"
 
 article:
   anchor_label: "Horgony"
@@ -19,6 +19,12 @@ article:
   part: "Part"
   this_article: "This Article"
   related_articles: "Related"
+
+a11y:
+  disable_blur: "Elmosódás kikapcsolása"
+  disable_images: "Képek kikapcsolása"
+  show_link_underline: "Link aláhúzásának megjelenítése"
+  font_size: "Betűméret"
 
 author:
   byline_title: "Szerző"
@@ -53,6 +59,7 @@ search:
 sharing:
   email: "Küldés emailben"
   facebook: "Megosztás a Facebookon"
+  line: "Megosztás a LINE-on"
   linkedin: "Megosztás a LinkedInen"
   pinterest: "Megosztás a Pinteresten"
   reddit: "Megosztás a Redditen"
