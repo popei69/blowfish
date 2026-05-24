@@ -1,0 +1,60 @@
+<div
+  id="eo-popup"
+  class="fixed inset-0 z-50 items-center justify-center p-4 bg-neutral-900/60 backdrop-blur-sm"
+  style="display:none"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Newsletter signup"
+>
+  <div class="w-full max-w-md">
+    {{ partial "email-subscription-card.html" (dict "popup" true) }}
+  </div>
+</div>
+<script>
+(function () {
+  var DISMISS_DAYS = 14;
+  var SCROLL_THRESHOLD = 0.65;
+  var popup = document.getElementById('eo-popup');
+  if (!popup) return;
+
+  function canShow() {
+    try {
+      if (localStorage.getItem('eo_subscribed')) return false;
+      var t = localStorage.getItem('eo_dismissed');
+      if (t && (Date.now() - parseInt(t, 10)) / 86400000 < DISMISS_DAYS) return false;
+    } catch (_) {}
+    return true;
+  }
+
+  function show() { popup.style.display = 'flex'; }
+
+  function dismiss() {
+    popup.style.display = 'none';
+    try { localStorage.setItem('eo_dismissed', Date.now().toString()); } catch (_) {}
+  }
+
+  popup.querySelectorAll('.eo-popup-close').forEach(function (btn) {
+    btn.addEventListener('click', dismiss);
+  });
+
+  popup.addEventListener('click', function (e) {
+    if (e.target === popup) dismiss();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && popup.style.display === 'flex') dismiss();
+  });
+
+  if (!canShow()) return;
+
+  var triggered = false;
+  window.addEventListener('scroll', function () {
+    if (triggered) return;
+    var ratio = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if (ratio >= SCROLL_THRESHOLD) {
+      triggered = true;
+      show();
+    }
+  }, { passive: true });
+})();
+</script>
