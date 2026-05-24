@@ -1,2 +1,5 @@
 <hr class="border-dotted border-neutral-300 dark:border-neutral-600 my-8">
-{{ partial "email-subscription-card.html" (dict "popup" false) }}
+{{ partial "email-subscription-card.html" . }}
+<div id="eo-bridge" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+  <script async src="https://eomail6.com/form/0e9e62e0-23b6-11ee-93e9-634cb2659587.js" data-form="0e9e62e0-23b6-11ee-93e9-634cb2659587"></script>
+</div>

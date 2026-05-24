@@ -1,13 +1,13 @@
 <div
   id="eo-popup"
-  class="fixed inset-0 z-50 items-center justify-center p-4 bg-neutral-900/60 backdrop-blur-sm"
-  style="display:none"
+  class="fixed inset-0 bg-neutral-900/60 backdrop-blur-sm"
+  style="display:none;z-index:50;align-items:center;justify-content:center;padding:1rem"
   role="dialog"
   aria-modal="true"
   aria-label="Newsletter signup"
 >
-  <div class="w-full max-w-md">
-    {{ partial "email-subscription-card.html" (dict "popup" true) }}
+  <div style="width:100%;max-width:460px">
+    {{ partial "email-subscription-card.html" . }}
   </div>
 </div>
 <script>
@@ -32,10 +32,6 @@
     popup.style.display = 'none';
     try { localStorage.setItem('eo_dismissed', Date.now().toString()); } catch (_) {}
   }
-
-  popup.querySelectorAll('.eo-popup-close').forEach(function (btn) {
-    btn.addEventListener('click', dismiss);
-  });
 
   popup.addEventListener('click', function (e) {
     if (e.target === popup) dismiss();
